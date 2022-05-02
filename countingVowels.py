@@ -1,18 +1,11 @@
 def count_vowels(user_input):
-    vowels = 0
-    for letter in user_input:
-        if letter == 'a':
-            vowels += 1
-        elif letter == 'e':
-            vowels += 1
-        elif letter == 'o':
-            vowels += 1            
-        elif letter == 'i':
-            vowels += 1
-        elif letter == 'u':
-            vowels += 1
-    return vowels
+    vowel_count = 0
+    vowels = ["a", "e", "i", "o", “u”]
+    for letter in user_input.lower():
+        if letter in vowels:
+            vowel_count +=1
+    return vowel_count
 
-user_input = input('Enter a string: ').lower()
+user_input = input('Enter a string: ')
 
 print('There are ' + str(count_vowels(user_input)) + ' vowels in the string ' + user_input)
